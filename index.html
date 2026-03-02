@@ -4,53 +4,57 @@
   <meta charset="UTF-8">
   <title>MON PORTFOLIO</title>
   <style>
+    *{
+      box-sizing:border-box;
+    }
+
     body {
       background-color:#2c3e50;
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0px;
       line-height:3.2;
       overflow-x:hidden;
       font-size:35px;
-      padding-top:60px;
+      padding-top:80px;
+      color:white;
     }
+
     nav{
       position:fixed;
-      top:0px;
-      left:0px;
-      right:0px;
+      top:0;
+      left:0;
+      right:0;
       width:100%;
       background:#333;
       padding:10px;
-      list-style:none;
       text-align:center;
-      z-index:1; 
+      z-index:10; 
     }
-    /* Navigation */
+
     nav ul {
-      background: #333;
-      padding: 10px;
-      margin:0px;
+      padding:0;
+      margin:0;
       list-style: none;
-      text-align: center;
       display:flex;
       justify-content:space-between;
       flex-wrap:wrap;
-      white-space:nowrap;
     }
-    nav ul a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      transition:color 0.3s ease-in-out;
-    }
+
     nav ul li{
       margin:0 10px;
     }
-    nav ul a:hover{
-      color:white;
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition:color 0.3s ease-in-out;
     }
+
+    nav ul li a:hover{
+      color:#ccc;
+    }
+
     .btn{
       background:#333;
       color:#fff;
@@ -60,209 +64,179 @@
       cursor:pointer;
       margin:10px;
     }
+
     .btn:hover{
       background-color:#555;
     }
-    /* Image de profil */
+
     img {
       width: 400px;
       height: 400px;
       float:right;
       margin:20px;
       padding:10px;
-      border-radius: 100%; /* Cercle parfait */
+      border-radius: 50%;
       object-fit: cover;
-      border: 0px solid #666;
       animation:fade 5s infinite;
       transition:transform 0.5s ease-in-out;
     }
+
     img:hover{
-      transform:scale(1.2);
-      content:url('sary-vaovao-jpg');
+      transform:scale(1.1);
     }
+
     @keyframes fade{
-      0%{
-        opacity:1;
-      }
-      50%{
-        opacity:0;
-      }
-      100%{
-        opacity:1;
-      }
+      0%{opacity:1;}
+      50%{opacity:0;}
+      100%{opacity:1;}
     }
+
     #accueil {
       display:grid; 
-      height:55vh;
-      align-items:center;
-      grid-direction:column;
-      justify-content:center;
       grid-template-columns:1fr 1fr;
-      gap:0px;
+      align-items:center;
+      justify-content:center;
+      height:55vh;
       background-image:linear-gradient(to bottom,#2c3e50,#3498db);
-      color:#fff;
-      padding:0px;
-      margin:0px;
-      box-sizing:border-box;
-      overflow-x:hidden;
-      width:100vw;
+      padding:20px;
+      width:100%;
       text-align:center;
     }
-  #accueil h1{
-    font-size:70px;
-    margin-bottom:50px
-  }
-  #accueil p{
-    font-size:50px;
-    margin-bottom:10px;
-  }
-  #accueil .btn{
-    background-color:#3498db;
-    color:#fff;
-    padding:50px 60px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    margin-top:30px;
-    font-size:50px;
-  }
-  #accueil .btn:hover{
-    background-color:#2980b9;
-  }
+
+    #accueil h1{
+      font-size:70px;
+      margin-bottom:50px;
+    }
+
+    #accueil p{
+      font-size:50px;
+      margin-bottom:10px;
+    }
+
+    #accueil .btn{
+      background-color:#3498db;
+      padding:30px 40px;
+      border-radius:10px;
+      font-size:40px;
+    }
+
+    #accueil .btn:hover{
+      background-color:#2980b9;
+    }
+
     section{
       background-image:linear-gradient(to bottom,#2c3e50,#3498db);
-      background-color:#fff;
       margin-bottom: 50px;
       padding: 50px;
       border-radius: 50px;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
       transition:all 0.3s ease-in-out;
       width:100%;
-      color:white;
     }
+
     section h2{
-      margin-top:0px;
-      margin-bottom:0px;
-      font-size:100px; 
+      font-size:80px; 
+      margin:0;
     }
+
     section ul{
       list-style:square;
-      padding:0;
-      margin:0;
-      margin-top:0px;
       padding-left:20px;
     }
+
     section li{
-      margin-bottom:80px;
+      margin-bottom:40px;
     }
-  section a{
-    color:#337ab7;
-    text-decoration:none;
-  }
-  section a:hover{
-    color:#23527c;
-  }
-  section:not(#accueil):hover{
-    animation:section-anim 1s infinite;
-    border-top:10px solid violet;
-  }
-  @keyframes section-anim{
-    0%{
-      transform:scale(1);
+
+    section a{
+      color:#337ab7;
+      text-decoration:none;
     }
-    50%{
-      transform:scale(1.05);
+
+    section a:hover{
+      color:#23527c;
     }
-    100%{
-      transform:scale(1);
+
+    section:not(#accueil):hover{
+      animation:section-anim 1s infinite;
+      border-top:10px solid violet;
     }
-  }
+
+    @keyframes section-anim{
+      0%{transform:scale(1);}
+      50%{transform:scale(1.05);}
+      100%{transform:scale(1);}
+    }
+
     .container{
       display:flex;
       flex-direction:column;
       align-items:center;      
-      justify-content:space-between;
-      column-gap:20px;
-      row-gap:20px;
+      gap:20px;
     }
+
     #about,#skills,#projet,#loisir{
       width:100%;
-      padding:50px;
       margin:50px;
     }
-    *{
-      box-sizing:border-box;
-    }
-    #contact{
-      margin-top:40px;
-    }
-    h1, h2 {
-      color: #2c3e50;
-    }
+
     footer{
       background-color:#333;
       color:#fff;
       padding:10px;
       text-align:center;
-      clear:both;
     }
+
     .nom{
       font-size:80px;
-      background-color:#2c3e50,#3498db;
       font-style:italic;
       font-weight:bold;
       margin-top:100px;
-      margin-right:0px;/*ajouter cette ligne pour deplacer le nom à droite*/
     }
-  .nom span{
-    display:inline-block;
-    animation:slide-in 5s;
-  }
-  .nom .gauche{
-    animation-name:slide-in-gauche;
-  }
-  .nom .droite{
-    animation-name:slide-in-droite;
-  }
-  @keyframes slide-in-gauche{
-    0%{
-      transform:translateX(-100%);
+
+    .nom span{
+      display:inline-block;
     }
-    100%{
-      transform:translateX(0%);
+
+    .nom .gauche{
+      animation:slide-in-gauche 5s;
     }
-  }
-  @keyframes slide-in-droite{
-    0%{
-      transform:translateX(100%);
+
+    .nom .droite{
+      animation:slide-in-droite 5s;
     }
-    100%{
-      transform:translateX(0%);
+
+    @keyframes slide-in-gauche{
+      from{transform:translateX(-100%);}
+      to{transform:translateX(0);}
     }
-  }
+
+    @keyframes slide-in-droite{
+      from{transform:translateX(100%);}
+      to{transform:translateX(0);}
+    }
+
     .image-container{
       float:right;
       text-align:left;
-      margin-right:20px;/*ajouter cette ligne pour deplacer l'image à droite*/
+      margin-right:20px;
     }
-  .fleche{
-    display:inline-block;
-    animation:fleche-anim 1s infinite;
-  }
-  @keyframes fleche-anim{
-    0%{
-      transform:translateX(0px);
+
+    .fleche{
+      display:inline-block;
+      animation:fleche-anim 1s infinite;
     }
-    50%{
-      transform:translateX(5px);
+
+    @keyframes fleche-anim{
+      0%{transform:translateX(0);}
+      50%{transform:translateX(5px);}
+      100%{transform:translateX(0);}
     }
-    100%{
-      transform:translateX(0px);
-    }
-  }
+
   </style>
 </head>
 <body>
+
   <nav>
     <ul>
       <li><a href="#accueil">Accueil</a></li>
@@ -273,18 +247,20 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+
   <section id="accueil">
     <h1>BIENVENUE SUR MON PORTFOLIO</h1>
     <div class="image-container">
-      <img src="IMG_.jpg" alt="IMG_.jpg" class="IMG_.jpg">
+      <img src="IMG_.jpg" alt="IMG_.jpg">
       <p class="nom">
         <span class="gauche">MOUHALAZ</span>
         <span class="droite">YONKAH</span>
       </p>
     </div>
     <p>Je suis un développeur web passionné.</p>
-    <button class="btn" id="btn-travail">Decouvrir mon travail<span class="fleche"><<<<</span></button>
+    <button class="btn" id="btn-travail">Decouvrir mon travail <span class="fleche"> &gt;&gt;&gt;</span></button>
   </section>
+
  <div id="sections" style="display:none;">
     <div class="container">
       <section id="about">
@@ -296,6 +272,7 @@
           <li>Je suis également un grand amateur de musique et de sport.</li>
         </ul>
       </section>
+
       <section id="skills">
         <h2>Mes compétences :</h2>
         <ul>
@@ -305,6 +282,7 @@
         </ul>
       </section>
     </div>
+
     <div class="container">
       <section id="projet">
         <h2>Mon projet :</h2>
@@ -313,6 +291,7 @@
           <li>Objectif : devenir un développeur web compétent et contribuer au succès d'une équipe.</li>
         </ul>
       </section>
+
       <section id="loisir">
         <h2>Loisirs :</h2>
         <ul>
@@ -322,6 +301,7 @@
         </ul>
       </section>
     </div>
+
     <section id="contact">
       <h2>Contacts</h2>
       <ul>
@@ -331,24 +311,28 @@
       </ul>
     </section>
  </div>
+
   <footer>
-    <p>&copy;2026Mon portfolio</p>
+    <p>&copy;2026 Mon portfolio</p>
   </footer>
+
   <script>
     document.getElementById('btn-travail').addEventListener('click', function() {
       document.getElementById('sections').style.display = 'block';
       window.location.href='#about';
     });
-  document.querySelector('a[href="#accueil"]').addEventListener('click',function(){
-    document.querySelector('.nom .gauche').style.animation='none';
-    document.querySelector('.nom .droite').style.animation='none';
-    setTimeout(function(){
-     document.querySelector('.nom .gauche').style.animation='slide-in-gauche 5s';
-     document.querySelector('.nom .droite').style.animation='slide-in-droite 5s';
-    },10);
-  });
-    
-    </script>
+
+    document.querySelector('a[href="#accueil"]').addEventListener('click',function(){
+      const gauche = document.querySelector('.nom .gauche');
+      const droite = document.querySelector('.nom .droite');
+      gauche.style.animation='none';
+      droite.style.animation='none';
+      setTimeout(function(){
+        gauche.style.animation='slide-in-gauche 5s';
+        droite.style.animation='slide-in-droite 5s';
+      },10);
+    });
+  </script>
+
 </body>
 </html>
-
