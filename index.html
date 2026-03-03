@@ -1,243 +1,376 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Portfolio - Mouhalaz Yonkah</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-      font-family:Arial, sans-serif;
+<!DOCTYPE html> 
+<html lang="fr"> 
+<head> 
+<meta charset="UTF-8"> 
+<title>Portfolio - Mouhalaz Yonkah</title> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<style> 
+*{ 
+  box-sizing:border-box; 
+  margin:0; 
+  padding:0; 
+  font-family:Arial, sans-serif;
+} 
+body{ 
+  background:#1e1e2f; 
+  color:white; 
+  line-height:1.2;
+} 
+/* HEADER */ 
+header{
+  background:linear-gradient(to right,#2c3e50,#3498db);
+  padding:60px 20px;
+} 
+.hero{ 
+  display:flex;
+  align-items:center; 
+  justify-content:space-between;
+  max-width:1100px;
+  margin:auto; 
+  flex-wrap:wrap; 
+} 
+.hero-text{ 
+  flex:1; 
+  min-width:250px;
+} 
+.hero-text h1{ 
+  font-size:50px; 
+  color:#3498db;
+} 
+.hero-text p{ 
+  font-size:24px; 
+  margin-top:10px;
+} 
+.hero-img{ 
+  flex:1;
+  text-align:center;
+  min-width:250px;
+  margin-top:20px; 
+} 
+.hero-img img{ 
+  width:220px; 
+  height:220px;
+  border-radius:50%;
+  object-fit:cover;
+  border:0px solid white;
+  animation:fade 5s infinite;
+  transition:transform 0.5s ease-in-out;
+} 
+ .hero-img img:hover{
+      transform:scale(1.2);
+      content:url('sary-vaovao-jpg');
     }
-
-    body{
-      background:#1e1e2f;
-      color:white;
-      line-height:1.6;
-    }
-
-    /* HEADER */
-    header{
-      background:linear-gradient(to right,#2c3e50,#3498db);
-      padding:60px 20px;
-    }
-
-    .hero{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      max-width:1100px;
-      margin:auto;
-      flex-wrap:wrap;
-    }
-
-    .hero-text{
-      flex:1;
-      min-width:250px;
-    }
-
-    .hero-text h1{
-      font-size:50px;
-    }
-
-    .hero-text p{
-      font-size:24px;
-      margin-top:10px;
-    }
-
-    .hero-img{
-      flex:1;
-      text-align:center;
-      min-width:250px;
-      margin-top:20px;
-    }
-
-    .hero-img img{
-      width:220px;
-      height:220px;
-      border-radius:50%;
-      object-fit:cover;
-      border:5px solid white;
-    }
-
-    /* NAV */
-    nav{
-      background:#111;
-      padding:15px;
-      position:sticky;
-      top:0;
-      z-index:10;
-    }
-
-    nav ul{
-      list-style:none;
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-
-    nav li{
-      margin:5px 15px;
-    }
-
-    nav a{
-      color:white;
-      text-decoration:none;
-      font-weight:bold;
-    }
-
-    nav a:hover{
-      color:#3498db;
-    }
-
-    /* SECTIONS */
-    section{
-      max-width:1000px;
-      margin:auto;
-      padding:50px 20px;
-    }
-
-    .box{
-      background:#2c3e50;
-      padding:30px;
-      border-radius:15px;
-      margin-bottom:30px;
-      box-shadow:0 0 10px rgba(0,0,0,0.4);
-    }
-
-    h2{
-      color:#3498db;
-      margin-bottom:15px;
-      font-size:36px;
-    }
-
-    ul{
-      padding-left:20px;
-    }
-
-    li{
-      margin-bottom:10px;
-      font-size:20px;
-    }
-
-    footer{
-      background:#111;
-      text-align:center;
-      padding:20px;
-      margin-top:40px;
-    }
-
-    /* RESPONSIVE */
-    @media(max-width:768px){
-      .hero{
-        flex-direction:column;
-        text-align:center;
+    @keyframes fade{
+      0%{
+        opacity:1;
       }
-
-      .hero-text h1{
-        font-size:36px;
+      50%{
+        opacity:0;
       }
-
-      .hero-text p{
-        font-size:18px;
-      }
-
-      h2{
-        font-size:28px;
-      }
-
-      li{
-        font-size:16px;
+      100%{
+        opacity:1;
       }
     }
-  </style>
-</head>
-<body>
-
-<header>
-  <div class="hero">
-    <div class="hero-text">
-      <h1>MOUHALAZ YONKAH</h1>
-      <p>Développeur web passionné</p>
-    </div>
-    <div class="hero-img">
-      <!-- Remplace photo.jpg par ton image -->
-      <img src="IMG_.jpg" alt="IMG_.jpg">
-    </div>
-  </div>
-</header>
-
-<nav>
-  <ul>
-    <li><a href="#about">À propos</a></li>
-    <li><a href="#skills">Compétences</a></li>
-    <li><a href="#projet">Projet</a></li>
-    <li><a href="#loisir">Loisirs</a></li>
-    <li><a href="#contact">Contact</a></li>
+  #loisir li img{
+    margin-right:5px; 
+    width:20px; 
+    height:20px;
+    border-radius:50%;
+   } 
+/* NAV */ 
+nav{ 
+  background:#3498db; 
+  padding:2px; 
+  position:fixed; 
+  top:0;
+  z-index:1; 
+} 
+nav ul{ 
+  list-style:none; 
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap; 
+} 
+nav li{
+  margin:5px 15px;
+} 
+nav a{ 
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+} 
+nav a:hover{ 
+  color:#3498db; 
+} 
+/* SECTIONS */ 
+section{ 
+  max-width:8000px; 
+  margin:auto;
+  padding:0px 0px; 
+  margin-bottom:100px;/*ajouter cette ligne */
+} 
+section:not(#accueil):hover{
+  animation:section-anim 1s infinite;
+  border-top:10px solid violet;
+  border-radius:20px
+} 
+@keyframes section-anim{ 
+  0%{
+    transform:scale(1);
+  }
+  50%{ 
+    transform:scale(1.05);
+  }
+  100%{
+    transform:scale(1);
+  }
+} 
+.box{ 
+  background:#2c3e50;
+  padding:30px;
+  border-radius:15px; 
+  margin-bottom:30px;
+  box-shadow:0 0 10px rgba(0,0,0,0.4);
+} 
+.nom{
+  font-size:80px; 
+  background:linear-gradient(to right,#2c3e50,#3498db);
+  font-style:italic;
+  font-weight:bold;
+  margin-top:100px;
+  margin-right:0px;/*ajouter cette ligne pour deplacer le nom à droite*/
+} 
+.nom span{ 
+  display:inline-block;
+  animation:slide-in 5s;
+} 
+.nom .gauche{
+  animation-name:slide-in-gauche;
+} 
+.nom .droite{ 
+  animation-name:slide-in-droite; 
+} 
+@keyframes slide-in-gauche{ 
+  0%{
+    transform:translateX(-100%);
+  }
+  100%{ 
+    transform:translateX(0%); 
+  }
+} 
+@keyframes slide-in-droite{
+  0%{
+    transform:translateX(100%);
+  }
+  100%{ 
+    transform:translateX(0%);
+  } 
+} 
+h2{ 
+  color:#3498db;
+  margin-bottom:15px;
+  font-size:36px; 
+} 
+ul{ 
+  padding-left:20px;
+  list-style-type:none;
+  display:block;
+  flex-wrap:wrap;
+  flex-direction:row;
+  justify-content:space-around;
+  padding:0;
+  margin:0;
+} 
+section li{
+  margin-bottom:10px; 
+  font-size:20px; 
+  background-color:#2c3e50;
+  padding:10px;
+  border:1px solid #ddd; 
+  border-radius:5px;
+  margin:3px;
+  border-bottom:1px solid #444;
+  list-style-position:inside;
+  text-align:justify;
+  width:auto;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+} 
+  section li:last-child{
+    border-bottom:none;
+  }
+/* RESPONSIVE */ 
+@media(max-width:768px){
+  .hero{ 
+    flex-direction:column; 
+    text-align:center;
+  } 
+  .hero-text h1{
+    font-size:36px;
+  } 
+  .hero-text p{
+    font-size:18px;
+  }
+  h2{ 
+    font-size:28px;
+  }
+  li{ 
+    font-size:16px;
+  } 
+} 
+/* LIGHT BULB */ 
+html{
+  scroll-behavior:smooth; 
+} 
+.light-bulb { 
+  position: relative;
+  text-align: center;
+  margin: 20px; 
+} 
+.light-bulb input[type="checkbox"] { 
+  display: none; 
+} 
+.OFF{ 
+  width: 100px; 
+  height: 100px;
+  transition: opacity 0.5s;
+} 
+.ON{ 
+  width: 100px; 
+  height: 100px;
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%); 
+  opacity: 0; transition: opacity 0.5s; 
+} 
+.light-bulb input[type="checkbox"]:checked ~ label .OFF{ 
+  opacity: 0; 
+} 
+.light-bulb input[type="checkbox"]:checked ~ label .ON{ 
+  opacity: 1; 
+} 
+.devoir { 
+  margin-top: 20px;
+  display: none;
+} 
+.light-bulb input[type="checkbox"]:checked ~ .devoir { 
+  display: block; 
+} 
+  #contact a{
+    color:#3498db;
+    text-decoration:none;
+    transition:color 0.2s ease;
+    font-size:18px;
+    font-weight:bold;
+    padding:10px 20px;
+    border:1px solid #ddd;
+    border-radius:5px;
+  }
+  #contact a:hover{
+    background-color:#2c3e50;
+  }
+</style> 
+  </head> 
+   <body> 
+     <header> 
+       <section id="accueil"> 
+         <div class="hero"> 
+         <div class="hero-text"> 
+           <h1>BIENVENUE SUR MON PORTFOLIO</h1> 
+              <p class="nom"> 
+               <span class="gauche">MOUHALAZ</span> 
+               <span class="droite">YONKAH</span> 
+              </p> 
+              <p>Développeur web passionné</p> 
+          </div> 
+         <div class="hero-img"> 
+<!-- Remplace photo.jpg par ton image --> 
+      <img src="IMG_.jpg" alt="IMG_.jpg"> 
+   </div> 
+ </div> 
+</section> 
+   <nav> 
+    <ul> 
+       <li><a href="#accueil">Accueil</a></li> 
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li> 
+       <li><a href="#diplôms">Diplômes</a></li>
+        <li><a href="#projet">Projet</a></li> 
+        <li><a href="#loisir">Loisirs</a></li> 
+        <li><a href="#contact">Contact</a></li> 
+      </ul> 
+    </nav> 
+   <div class="light-bulb"> 
+    <input type="checkbox" id="interrupteur"> 
+     <label for="interrupteur"> 
+      <img src="IMG_15.jpg" alt="OFF" class="OFF"> 
+      <img src="IMG_15.jpg" alt="ON" class="ON"> 
+  </label> 
+   <div class="devoir"> 
+<!-- Devoir-nao eto --> 
+  <section id="about"> 
+   <div class="box"> 
+    <h2>À propos de moi</h2> 
+     <ul> 
+      <li>Je suis un étudiant en informatique à l'Université de l'E.M.I.T FIANARANTSOA.</li> 
+     <li>Je suis passionné par la programmation.</li> 
+     <li>Je suis toujours à la recherche de nouvelles technologies.</li> 
+     <li>Je suis également un grand amateur de musique et de sport.</li> 
   </ul>
-</nav>
-
-<section id="about">
-  <div class="box">
-    <h2>À propos de moi</h2>
-    <ul>
-      <li>Je suis un étudiant en informatique à l'Université de l'E.M.I.T FIANARANTSOA.</li>
-      <li>Je suis passionné par la programmation.</li>
-      <li>Je suis toujours à la recherche de nouvelles technologies.</li>
-      <li>Je suis également un grand amateur de musique et de sport.</li>
-    </ul>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="box">
-    <h2>Mes compétences</h2>
-    <ul>
-      <li>Développement web (HTML, CSS)</li>
-      <li>Base de données</li>
-      <li>Bureautique (Microsoft Word, Excel, PowerPoint)</li>
-    </ul>
-  </div>
-</section>
-
-<section id="projet">
-  <div class="box">
-    <h2>Mon projet</h2>
-    <ul>
-      <li>Recherche d'un stage ou d'un emploi pour acquérir de l'expérience.</li>
-      <li>Objectif : devenir un développeur web compétent et contribuer au succès d'une équipe.</li>
-    </ul>
-  </div>
-</section>
-
-<section id="loisir">
-  <div class="box">
-    <h2>Loisirs</h2>
-    <ul>
-      <li>Football</li>
-      <li>Tennis</li>
-      <li>Lecture</li>
-    </ul>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="box">
-    <h2>Contacts</h2>
-    <ul>
-      <li><strong>Téléphone :</strong> 038 92 292 98 / 032 98 938 28</li>
-      <li><strong>Facebook :</strong> Mouhalaz yonkah</li>
-      <li><strong>Email :</strong> <a href="mailto:mouhalazyonkah@gmail.com">mouhalazyonkah@gmail.com</a></li>
-    </ul>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2026 Mon portfolio</p>
-</footer>
-
-</body>
+ </div> 
+</section> 
+ <section id="skills"> 
+   <div class="box"> 
+     <h2>Mes compétences</h2> 
+       <ul> 
+        <li>Développement web (HTML, CSS)</li> 
+        <li>Base de données</li> 
+        <li>Bureautique (Microsoft Word, Excel, PowerPoint)</li> 
+      </ul> 
+   </div> 
+ </section>
+     <section id="diplôms">
+       <div class="box">
+         <h2>Mes diplômes</h2>
+         <ul>
+           <li>2018:CEPE</li>
+           <li>2022:BEPEC</li>
+           <li>2025:BACC</li>
+           <li>Actuellement:L1</li>
+         </ul>
+       </div>
+     </section> 
+ <section id="projet"> 
+   <div class="box"> 
+     <h2>Mon projet</h2> 
+       <ul> 
+         <li>Recherche d'un stage ou d'un emploi pour acquérir de l'expérience.</li> 
+         <li>Objectif : devenir un développeur web compétent et contribuer au succès d'une équipe.</li> 
+       </ul> 
+   </div> 
+ </section> 
+ <section id="loisir"> 
+   <div class="box"> 
+     <h2>Loisirs</h2> 
+      <ul> 
+       <li><img src="1772484649582.jpg" alt="football">Football</li> 
+       <li><img src="1772484556487.jpg" alt="tennis">Tennis</li> 
+       <li><img src="1772484613846.jpg" alt="livre">Lecture</li> 
+     </ul> 
+   </div> 
+ </section> 
+ <section id="contact"> 
+  <div class="box"> 
+   <h2>Contacts</h2> 
+     <ul> 
+       <li><a href="tel:0329893828" target="_blank">Téléphone:032 98 938 28</a></li> 
+       <li><a href="tel:0389229298" target="_blank">Téléphone:0389229298</a></li>
+       <li><strong>Facebook :</strong><a href="https://www.facebook.com/MouhalazYonka" target="_blank">Mouhalaz yonka</a></li> 
+       <li><strong>Email :</strong> <a href="mailto:mouhalazyonkah@gmail.com" target="_blank">mouhalazyonkah@gmail.com</a></li> 
+     </ul> 
+   </div> 
+  </section> 
+ </div> 
+</div>   
+</header>
+</body> 
 </html>
